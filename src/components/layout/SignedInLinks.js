@@ -8,11 +8,16 @@ const SignedInLinks = (props) => {
   return (
     <div>
       <ul className="right">
-        <li><NavLink to='/create'
-        >Написать
-          
-        </NavLink></li>
-        <li><a onClick={props.signOut}>Выйти</a></li>
+        <li>
+          <NavLink to='/create'
+        >Написать          
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/' onClick={props.signOut}>
+            Выйти
+          </NavLink>
+        </li>
         
       </ul>
     </div>

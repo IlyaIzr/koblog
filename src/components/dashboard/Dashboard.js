@@ -8,7 +8,7 @@ import { compose } from 'redux'
 class Dashboard extends Component {
   render() {
 
-    const { projects, auth } = this.props;
+    const { projects } = this.props;
     //if (!auth.uid) return <div className="container">Text field TBD</div>     simple conditional render
     //if (!auth.uid) return <Redirect to='/signin' /> 
     //this is redirect from board 4 every unlogged user
@@ -33,6 +33,6 @@ const mapStateToProps = (state) => {
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: 'projects' }    //we chose to only watch for projects props
+    { collection: 'projects', orderBy: ['createdAt', 'desc'] }    //we chose to only watch for projects props
   ])
 )(Dashboard)

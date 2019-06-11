@@ -1,8 +1,6 @@
 import React from 'react'
 import ProjectSummary from './ProjectSummary'
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router-dom'
-import { connect } from 'react-redux'
 
 const ProjectList = ({projects}) => {
   return (
